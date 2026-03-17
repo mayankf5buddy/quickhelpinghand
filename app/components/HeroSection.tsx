@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <header className="hero-bg text-white py-24 lg:py-32 relative overflow-hidden">
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <h1 className="text-4xl md:text-4xl font-bold mb-6 leading-tight">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
           Become One of the First <br /> Service Providers in Your City
         </h1>
         <p className="text-lg text-blue-100 font-light mb-8 max-w-7xl mx-auto">
@@ -14,7 +14,7 @@ export default function HeroSection() {
           </span>
         </p>
         <div className="mb-8">
-          <span className="border-b-2 border-white border-solid p-1 uppercase font-bold">
+          <span className="border-b-2 text-sm md:text-[18px] leading-[30px] md:leading-normal border-white border-solid p-1 uppercase font-bold">
             Early Access Price Lifetime Listing for Just $5
           </span>
         </div>

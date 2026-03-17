@@ -31,11 +31,11 @@ export default function CountdownTimer() {
 
   const units = timeLeft
     ? [
-        { label: "Days", value: pad(timeLeft.days) },
-        { label: "Hours", value: pad(timeLeft.hours) },
-        { label: "Minutes", value: pad(timeLeft.minutes) },
-        { label: "Seconds", value: pad(timeLeft.seconds) },
-      ]
+      { label: "Days", value: pad(timeLeft.days) },
+      { label: "Hours", value: pad(timeLeft.hours) },
+      { label: "Minutes", value: pad(timeLeft.minutes) },
+      { label: "Seconds", value: pad(timeLeft.seconds) },
+    ]
     : [];
 
   return (
@@ -46,23 +46,23 @@ export default function CountdownTimer() {
         {expired ? (
           <p className="text-4xl font-bold text-[#f97316]">EXPIRED</p>
         ) : (
-          <div id="countdown" className="flex flex-wrap justify-center gap-4 md:gap-2 mb-8">
+          <div id="countdown" className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
             {units.map((u, i) => (
               <Fragment key={u.label}>
                 <div className="flex flex-col items-center">
-                  <span className="text-5xl font-bold text-[#023a78]">{u.value}</span>
-                  <span className="text-sm text-[#f97316] font-semibold uppercase mt-2">{u.label}</span>
+                  <span className="text-4xl md:text-7xl font-bold text-[#023a78]">{u.value}</span>
+                  <span className="text-xs text-brand-orange md:text-[16px] font-normal  mt-2">{u.label}</span>
                 </div>
                 {i < units.length - 1 && (
-                  <div className="text-5xl font-bold text-[#023a78] self-center">:</div>
+                  <div className="text-2xl md:text-5xl  font-bold text-[#023a78]  mt-1 md:mt-2">:</div>
                 )}
               </Fragment>
             ))}
           </div>
         )}
 
-        <p className="text-xl text-[#023a78] font-medium">
-          After launch, provider listings will cost <span className="text-[#f97316] font-bold">$25.</span>
+        <p className="text-1xl md:text-3xl text-[#023a78] font-bold">
+          After launch, provider listings will cost <span className="text-[#f97316] text-2xl md:text-[40px] font-bold">$25.</span>
         </p>
       </div>
     </section>
