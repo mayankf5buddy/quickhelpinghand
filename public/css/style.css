@@ -1,28 +1,11 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-brand-dark: #023a78;
-  --color-brand-blue: #1e40af;
-  --color-brand-orange: #f97316;
-  --color-brand-light: #f0f9ff;
-  --color-brand-blueL: #4075ae;
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: "Poppins", sans-serif;
 }
 
 .hero-bg {
-  background-image: linear-gradient(rgba(14, 42, 94, 0.85), rgba(14, 42, 94, 0.7)), url("/img/banner-img.png");
+  background-image:
+    linear-gradient(rgba(14, 42, 94, 0.85), rgba(14, 42, 94, 0.7)),
+    url("img/banner-img.png");
   background-size: contain;
   background-position: 0% 50%;
   position: relative;
@@ -35,15 +18,33 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(273deg, rgba(1, 168, 201, 0.133) 0%, rgba(64, 117, 174, 1) 48%, rgba(38, 58, 145, 1) 100%);
+  background: #01a7c9;
+  background: linear-gradient(
+    273deg,
+    rgba(1, 168, 201, 0.133) 0%,
+    rgba(64, 117, 174, 1) 48%,
+    rgba(38, 58, 145, 1) 100%
+  );
 }
 
 .form-bg {
-  background-image: url("/img/form-bg.webp");
+  background-image: url("img/form-bg.webp");
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
 }
+
+/* 
+        .form-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1e3c7e;
+            opacity: .8;
+        } */
 
 .mobile-menu {
   transition: transform 0.3s ease-in-out;
@@ -100,4 +101,9 @@ body {
 .multiselect-options.open {
   max-height: 300px;
   overflow-y: auto;
+}
+
+.multiselect-checkbox:checked + label {
+  background-color: #fef3c7;
+  color: #f97316;
 }
